@@ -12,13 +12,13 @@ This topic describes how to use Metricbeat to collect metrics from a MacBook, se
 
 1.  Purchase and configure an Alibaba Cloud Elasticsearch instance
 
-    If you do not have an Alibaba Cloud Elasticsearch instance, you must activate Alibaba Cloud Elasticsearch and create an instance [Prerequisites](../../../../../reseller.en-US/Quick Start/Prerequisites.md#). You can then send the data collected from the MacBook to the Alibaba Cloud Elasticsearch instance through the internal or public IP address of the instance.
+    If you do not have an Alibaba Cloud Elasticsearch instance, you must activate Alibaba Cloud Elasticsearch and create an instance [Prerequisites](../../../../../reseller.en-US/Quick Start/Prerequisites.md#). You can then send the data collected from the MacBook to the Alibaba Cloud Elasticsearch instance through the internal or public address of the Elasticsearch instance.
 
     **Note:** 
 
-    -   If you access the Alibaba Cloud Elasticsearch instance through its public IP address, you must switch on Public Address and configure a **public IP address whitelist** on the Security page.
+    -   If you access the Alibaba Cloud Elasticsearch instance through its public address, you must switch on Public Address and configure a **public IP address whitelist** on the Security page.
 
-    -   If you access the Alibaba Cloud Elasticsearch instance through its internal IP address, you must create an Alibaba Cloud Elastic Compute Service \(ECS\) instance in the same **VPC** and **region** as the Alibaba Cloud Elasticsearch instance to manage access to the Elasticsearch.
+    -   If you access the Alibaba Cloud Elasticsearch instance through its internal address, you must create an Alibaba Cloud Elastic Compute Service \(ECS\) instance in the same **VPC** and **region** as the Alibaba Cloud Elasticsearch instance to manage access to the Elasticsearch.
 
     1.  Log on to the Alibaba Cloud Elasticsearch console, click the instance name or ID, and then click Security in the left-side navigation pane. On the Security page, switch on Public Address.
 
@@ -30,7 +30,7 @@ This topic describes how to use Metricbeat to collect metrics from a MacBook, se
 
 **Note:** If you use a public network, add the IP address of the jump server that controls outbound network traffic of the public network to the whitelist. If you cannot obtain the IP address of the jump server, add 0.0.0.0/1,128.0.0.0/1 to the whitelist to allow a certain part of IP addresses. **This setting exposes the Alibaba Cloud Elasticsearch instance to the public network. Evaluate the risks and proceed with caution**.
 
-    3.  After you complete the configuration, click Basic Information in the left-side navigation pane and copy the public IP address of the Alibaba Cloud Elaticsearch instance.
+    3.  After you complete the configuration, click Basic Information in the left-side navigation pane and copy the public address of the Alibaba Cloud Elaticsearch instance.
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/134309/155496640040016_en-US.png)
 
@@ -56,7 +56,7 @@ This topic describes how to use Metricbeat to collect metrics from a MacBook, se
 
         Alibaba Cloud Elasticsearch provides the following access control information:
 
-        -   hosts: the public or internal IP address of the Alibaba Cloud Elasticsearch instance. This example uses the public IP address.
+        -   hosts: the public or internal address of the Alibaba Cloud Elasticsearch instance. This example uses the public address.
         -   protocol: set to http.
         -   username: the default username is **elastic**.
         -   password: the password that is used to log on to Alibaba Cloud Elasticsearch.
